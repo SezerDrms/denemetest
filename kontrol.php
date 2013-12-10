@@ -17,8 +17,7 @@ if($_POST){
         $sql_dizi_name=mysql_num_rows($select_name);
         if($sql_dizi_name==0&& strlen($my_name)>6){
             Header('Location: index.php?f=0');
-        }
-        elseif($password!=$mepas&& strlen($password)>8){
+        }elseif($password!=$mepas&& strlen($password)>8){
                 Header('Location: index.php?f=0');
         }else{
             $select=mysql_query("SELECT * FROM member WHERE member_name='".$my_name."'");
