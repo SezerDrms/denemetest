@@ -5,6 +5,7 @@
     $mem_pass_again=sha1(p("mem_pass_again"));
     $mem_mail=p("mem_mail");
     if($_POST){
+
         if(!$mem_name&&!$mem_pass&&!$mem_pass_again&&!$mem_mail){
             header('Location: ../member_save.php?all=0');
         }
