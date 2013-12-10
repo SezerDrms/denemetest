@@ -1,0 +1,65 @@
+@import url("member_data/member.css");
+@import url("member_login/login.css");
+body{background-image:url("image/call_of_duty_black_ops_desktop_1920x1080_hd-wallpaper-912990.jpg");
+    background-size: 100% 100%}
+.fo_di{background: 1px rgba(0, 0, 0, 0.7);
+    width: 690px;
+    border-radius: 20px;
+    height: auto;position: absolute;}
+.fo_di td{font:small-caps bold 18px Lucida Grande;
+    color: #fff;
+}
+.fo_di input{border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0px 0px 0px 5px rgba(255,255,255,0.3);
+    border-style:inherit;
+    height: 24px}
+#mysubmit {border-radius: 3px;
+    border-color:darkred;
+    background-color: #fff;
+    float: right;
+    color: ThreeDDarkShadow;
+    box-shadow: 0 0 0;cursor: pointer}
+#mysubmit:hover {border-radius: 3px;
+    background-color: #fff;
+    float: right;
+    color: threeddarkshadow;
+    box-shadow: 0px 0px 0px 5px rgba(255,255,255,0.3)}
+div .member_div a{
+    margin-right: 30px;
+    margin-top: 20;
+    float: right;
+    padding: 8px 10px 8px 10px;
+    font: small-caption;
+    background-color: #fff;
+    font-family: Arial,  Helvetica, sans-serif;
+    font-size: 13px;
+    border-radius: 3px;
+    text-decoration: none;
+    color: ThreeDDarkShadow;
+}
+.member_div a:hover {
+    box-shadow: 0px 0px 0px 5px rgba(255,255,255,0.3);
+}
+.fo_di span{position: relative}
+.fo_di span:hover:before{
+    content: attr(data-tooltip);
+    position: absolute;
+    background-color: #363636;
+    width: 150px;
+    text-align: center
+}
+.fo_di span:hover:after{border: 7px solid transparent;
+    position: absolute;
+    content: '';}
+.fo_di span[data-rigth]:hover:before{left: 170px;
+    background: 1px rgba(255, 255, 255, .3);}
+.fo_di span[data-rigth]:hover:after{border-right-color: rgba(255,255,255, .3);
+    top: 7px;
+    right: -17px;}
+.false-name-pass{
+    font:small-caps bold 18px Lucida Grande;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 220px;
+}

@@ -1,0 +1,3 @@
+.logindiv{color: white;padding: 20px ;width: 350px;float: right}
+.logindiv li a{text-decoration: none;float: left;padding: 5px}
+.logindiv li{list-style-type:none; display:inline;}
