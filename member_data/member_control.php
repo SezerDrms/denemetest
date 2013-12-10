@@ -1,6 +1,4 @@
-<?
-
-
+<?php
     require_once "../function.php";
     $mem_name=p("mem_name");
     $mem_pass=sha1(p("mem_pass"));
