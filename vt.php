@@ -7,7 +7,10 @@
     mysql_query("SET CHARACTER SET 'utf-8'");
     mysql_query("SET NAMES 'utf-8'");
     $select=mysql_query("SELECT * FROM member");
-    $sql_dizi=mysql_fetch_array($select);
+    while($sql_rows=mysql_fetch_array($select)){
+        $sql_dizi=$sql_rows;
+    }
     $mena=$sql_dizi["member_name"];
     $mepas=$sql_dizi["member_password"];
+
 ?>

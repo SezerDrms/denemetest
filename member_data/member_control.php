@@ -5,7 +5,6 @@
     $mem_pass_again=sha1(p("mem_pass_again"));
     $mem_mail=p("mem_mail");
     if($_POST){
-
         if(!$mem_name&&!$mem_pass&&!$mem_pass_again&&!$mem_mail){
             header('Location: ../member_save.php?all=0');
         }
@@ -21,12 +20,6 @@
         }
         elseif(strlen($mem_name)>6){
             header('Location: ../member_save.php?n=len');
-        }
-        elseif(strlen($mem_pass)>8){
-            header('Location: ../member_save.php?p=len');
-        }
-        elseif(strlen($mem_pass_again)>8){
-            header('Location: ../member_save.php?pg=len');
         }else{
         $tmail=explode("@",$mem_mail);
         $mailler = array('hotmail.com','gmail.com');

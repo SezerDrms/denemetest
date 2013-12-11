@@ -29,27 +29,19 @@
         </tr>
         <tr>
             <td>Kullanacağınız Ad </td>
-            <td><input type="text" name="mem_name"
-                    <?php   if(@$_GET["n"]=="0" || @$_GET["n"]=="len"||@$_GET["all"]="0"){?>
-                    style="box-shadow: 0px 0px 0px 5px rgba(200,0,0,0.5)"<?php } ?>></td>
+            <td><input type="text" name="mem_name"></td>
         </tr>
         <tr>
             <td>Kullanacağınız Şifre</td>
-            <td><input type="password" name="mem_pass"
-                    <?php   if(@$_GET["p"]=="0" || @$_GET["p"]=="len"||@$_GET["all"]="0"){?>
-                    style="box-shadow: 0px 0px 0px 5px rgba(200,0,0,0.5)"<?php } ?>></td>
+            <td><input type="password" name="mem_pass"></td>
         </tr>
         <tr>
             <td>Şifre Tekrarı</td>
-            <td><input type="password" name="mem_pass_again"
-                    <?php   if(@$_GET["pg"]=="0" || @$_GET["pg"]=="len"||@$_GET["all"]="0"){?>
-                    style="box-shadow: 0px 0px 0px 5px rgba(200,0,0,0.5)"<?php } ?>></td>
+            <td><input type="password" name="mem_pass_again"></td>
         </tr>
         <tr>
             <td>E-mail Adresiniz</td>
-            <td><input type="text" name="mem_mail"
-                    <?php   if(@$_GET["m"]=="0"||@$_GET["all"]="0"){?>
-                    style="box-shadow: 0px 0px 0px 5px rgba(200,0,0,0.5)"<?php } ?>></td>
+            <td><input type="text" name="mem_mail"></td>
         </tr>
         <tr>
             <td>
@@ -61,8 +53,7 @@
                     echo "<font color=#8b0000><center>Şifreler Aynı Değil!</center></font>";
 
                 }elseif(@$_GET["t"]=="0") {
-                    echo "<font color=#8b0000><center>Hata!</center></font>";
-                    Header("Refresh: 2; url=member_save.php");
+                    echo "<font color=#8b0000 ><center><span style='margin-left: -30px'>Bilgileri Doğru Giriniz!</span></center></font>";
                 }elseif(@$_GET["n"]=="0"||@$_GET["p"]=="0"||@$_GET["m"]=="0"){
                     echo "<font color=#8b0000><center>Boş Giriş Yaptınız!</center></font>";
                 }elseif( @$_GET["n"]=="len"||@$_GET["p"]=="len"||@$_GET["pg"]=="len"){
@@ -70,7 +61,8 @@
                 }
                 ?></td>
             <td><div class="giris-yap">
-                    <a href="index.php">GirişYap</a> </div><input type="submit" value="Kayıt" id="mem_sav_sub"></td>
+                    <a href="index.php">GirişYap</a> </div><input type="submit" value="Kayıt"
+                                                                  id="mem_sav_sub"></td>
         </tr>
     </table>
 </form>
