@@ -1,3 +1,48 @@
-.logindiv{color: white;padding: 20px ;width: 350px;float: right}
-.logindiv li a{text-decoration: none;float: left;padding: 5px}
-.logindiv li{list-style-type:none; display:inline;}
+body {
+    margin: 0;
+    height: 0;
+    }
+
+.logindiv{
+    border-bottom-left-radius: 120px;
+    background: 1px rgba(100, 100,100, 0.7);
+    padding: 20px;
+    margin-top: -70px;
+    color: white;
+    width: auto;
+    float: right;
+    height: auto;
+    }
+
+.logindiv li{
+list-style-type:none;
+font-family: Sans-serif;
+font-weight: bold;
+list-style-type:none;
+display:inline;
+    }
+
+.logindiv li a{
+    margin-right: 13px ;
+    border-radius: 5px;
+    background: 1px rgba(100, 0, 0, 0.5);
+    text-transform: uppercase;
+    text-decoration: none;
+    float: left;
+    padding: 5px 15px;
+    color: #ccc
+}
+.logindiv li a:hover{
+    background: 1px rgba(100, 0, 0, 0.3);
+    color: #ddd;
+}
+
+.username{
+    text-transform: capitalize;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    background: 1px rgba(100, 0, 0, 0.5);
+    border-bottom-right-radius: 120px;
+    padding: 20px;
+    width: 150px;
+    font-weight: bold;
+}

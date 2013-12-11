@@ -1,9 +1,9 @@
 @import url("member_data/member.css");
 @import url("member_login/login.css");
 body{background-image:url("image/call_of_duty_black_ops_desktop_1920x1080_hd-wallpaper-912990.jpg");
-    background-size: 100% 100%}
+    background-size: 100% 100%;}
 .fo_di{background: 1px rgba(0, 0, 0, 0.7);
-    width: 690px;
+    width: 700px;
     border-radius: 20px;
     height: auto;position: absolute;}
 .fo_di td{font:small-caps bold 18px Lucida Grande;
@@ -27,7 +27,7 @@ body{background-image:url("image/call_of_duty_black_ops_desktop_1920x1080_hd-wal
     box-shadow: 0px 0px 0px 5px rgba(255,255,255,0.3)}
 div .member_div a{
     margin-right: 30px;
-    margin-top: 20;
+    margin-top: 20px;
     float: right;
     padding: 8px 10px 8px 10px;
     font: small-caption;
