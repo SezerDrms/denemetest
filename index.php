@@ -74,7 +74,7 @@
     </tr>
     </table>
     <?php }else{
-            echo "<font color=white>hoşgeldin {$_SESSION["userdata"]["name"]}</font>";
+            echo print_r($_SESSION["userdata"]["mail"]);
         ?>
 
         <div class="logindiv">
