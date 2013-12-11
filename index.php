@@ -26,9 +26,7 @@
 </script>
 </head>
 <body>
-
 <?php if(@isLogin() == false){ ?>
-
 <div class="fo_di">
     <div class="member_div">
         <a href="member_save.php">Kayıt Ol</a>
@@ -76,7 +74,6 @@
     <?php }else{
             echo print_r($_SESSION["userdata"]["mail"]);
         ?>
-
         <div class="logindiv">
             <li>
                 <ul><a href="b-degistir.php">bilgileri değiştir</a></ul>
