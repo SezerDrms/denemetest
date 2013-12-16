@@ -11,18 +11,6 @@ body{background-image:url("../image/call_of_duty_black_ops_desktop_1920x1080_hd-
     position: absolute;
 }
 
-.member_save_center td{
-font:small-caps bold 18px Lucida Grande;
-color: #fff;
-    }
-
-.member_save_center input{
-    border-top-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    box-shadow: 0px 0px 0px 5px rgba(255,255,255,0.3);
-    border-style:inherit;
-    height: 24px
-}
 
 #mem_sav_sub{
     border-radius: 3px;

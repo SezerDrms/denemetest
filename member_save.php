@@ -53,7 +53,7 @@
                     echo "<font color=#8b0000><center>Şifreler Aynı Değil!</center></font>";
 
                 }elseif(@$_GET["t"]=="0") {
-                    echo "<font color=#8b0000 ><center><span style='margin-left: -30px'>Bilgileri Doğru Giriniz!</span></center></font>";
+                    echo "<font color=#8b0000 ><center><span style='margin-left: -37px'>Bu Kullanıcı Kullanılıyor!</span></center></font>";
                 }elseif(@$_GET["n"]=="0"||@$_GET["p"]=="0"||@$_GET["m"]=="0"){
                     echo "<font color=#8b0000><center>Boş Giriş Yaptınız!</center></font>";
                 }elseif( @$_GET["n"]=="len"||@$_GET["p"]=="len"||@$_GET["pg"]=="len"){

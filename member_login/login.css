@@ -6,8 +6,8 @@ body {
 .logindiv{
     border-bottom-left-radius: 120px;
     background: 1px rgba(100, 100,100, 0.7);
-    padding: 20px;
-    margin-top: -70px;
+    padding: 10px;
+    margin-top: -50px;
     color: white;
     width: auto;
     float: right;
@@ -39,10 +39,10 @@ display:inline;
 
 .username{
     text-transform: capitalize;
-    font-family: 'Oleo Script Swash Caps', cursive;
-    background: 1px rgba(100, 0, 0, 0.5);
+    font-family: 'Metrophobic', Arial, serif; font-weight:bold;
+    background: 1px rgba(200, 0, 0, 0.5);
     border-bottom-right-radius: 120px;
-    padding: 20px;
+    padding: 7px;
     width: 150px;
     font-weight: bold;
 }

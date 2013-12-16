@@ -6,7 +6,7 @@
 ?>
 <head>
 <meta charset="utf-8">
-    <link href='http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps' rel='stylesheet' type='text/css'>
+    <Link href = 'http://fonts.googleapis.com/css?family = Tutku + Bir: 700 'rel =' stil 'type =' text / css '>
 <link rel="stylesheet" type="text/css" href="layout.css">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script type="text/javascript">
@@ -79,7 +79,7 @@
             <ul>
                 <li><a href="b-degistir.php">bilgileri değiştir</a></li>
                 <li><a href="yaziekle.php"> yazı ekle</a></li>
-                <li><a href="sifre-degistir.php">şifre değiştir</a></li>
+                <li><a href="new_password/sifre-degistir.php">şifre değiştir</a></li>
                 <li><a href="logout.php">çıkış</a></li>
             </ul>
         </div>
