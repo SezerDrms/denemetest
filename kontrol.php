@@ -13,14 +13,14 @@ if($_POST){
     elseif(!$my_password){
         Header('Location: index.php?e=p1');
     }else{
-        $select_mail=mysql_query("SELECT * FROM member WHERE member_mail='".$my_mail."'");
+        $select_mail=mysql_query("SELECT * FROM member WHERE member_mail='".$my_mail."' and member_password='".$password."'");
         $sql_dizi_mail=mysql_num_rows($select_mail);
         if($sql_dizi_mail==0&& strlen($my_mail)>6){
-            Header('Location: index.php?f=0');
-        }elseif($password!=$mepas&& strlen($password)>8){
-                Header('Location: index.php?f=0');
+            Header('Location: index.php?f=0'); // :D ggiriş yapamıcan ondan burdan kısaım
+        //}elseif(strlen($password)>2){ // burada şifrenin 8 karakter olması lazım bi uzzat şifreyi deneyelim
+          //      Header('Location: index.php?f=0');
         }else{
-            $select=mysql_query("SELECT * FROM member WHERE member_mail='".$my_mail."'");
+            $select=mysql_query("SELECT * FROM member WHERE member_mail='".$my_mail."' and member_password='".$password."'");
             $sql_dizi=mysql_num_rows($select);
             $sql_row = mysql_fetch_array($select);
             if($sql_dizi>0){
