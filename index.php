@@ -85,6 +85,7 @@
                         </table>
                     </form>
                 </div>
+
                 <div class="text_null_input"><?php
                     if(@$_GET["text"]=="null"){
                         echo "Boş Giriş Yapmayınız!";
