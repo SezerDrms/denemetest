@@ -18,6 +18,7 @@ if($_POST){
         if($sql_dizi_mail==0&& strlen($my_mail)>6){
             Header('Location: index.php?f=0');
         }elseif($password!=$mepas&& strlen($password)>8){
+
                 Header('Location: index.php?f=0');
         }else{
             $select=mysql_query("SELECT * FROM member WHERE member_mail='".$my_mail."'");
