@@ -98,7 +98,11 @@
                 <li><a href="logout.php">çıkış</a></li>
             </ul>
         </div>
+                <div class="text_area">
 
+
+
+                </div>
     <?php } ?>
 
 </div>

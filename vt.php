@@ -6,6 +6,7 @@
     mysql_select_db("uyekayit",$active);
     mysql_query("SET CHARACTER SET 'utf-8'");
     mysql_query("SET NAMES 'utf-8'");
+    $text_date=mysql_query("SELECT * FROM member_text");
     $select=mysql_query("SELECT * FROM member");
     while($sql_rows=mysql_fetch_array($select)){
         $sql_dizi=$sql_rows;
