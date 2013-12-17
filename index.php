@@ -6,6 +6,7 @@
 ?>
 <head>
 <meta charset="utf-8">
+    <Link href = 'http://fonts.googleapis.com/css?family = Tutku + Bir: 700 'rel =' stil 'type =' text / css '>
 <link rel="stylesheet" type="text/css" href="layout.css">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script type="text/javascript">
@@ -45,12 +46,12 @@
     </tr>
     <tr>
         <td></td>
-        <td>Adınız : </td>
-        <td><span data-tooltip="ADINIZ" data-rigth><input type="text" name="myname"
-            <?php   if(@$_GET["e"]=="n1" || @$_GET["e"]=="d" || @$_GET["f"]=="0"){?>
+        <td><div style='margin-left: -8px'>Mail'iniz: </div></td>
+        <td><span data-tooltip="E-mail" data-rigth><input type="text" name="mymail"
+            <?php   if(@$_GET["e"]=="m1" || @$_GET["e"]=="d" || @$_GET["f"]=="0"){?>
                 style="box-shadow: 0px 0px 0px 5px rgba(200,0,0,0.5)"<?php } ?>/></span></td>
-        <td><?php if(@$_GET["e"]=="n1"||@$_GET["e"]=="d"){
-                echo "<font color=red>Adınızı Boş Girdiniz.</font>";
+        <td><?php if(@$_GET["e"]=="m1"||@$_GET["e"]=="d"){
+                echo "<font color=red>E-mail'inizi Boş Girdiniz.</font>";
             }
             ?></td>
     </tr>
@@ -72,15 +73,30 @@
     </tr>
     </table>
     <?php }else{
-            echo "<font color=white>hoşgeldin {$_SESSION["userdata"]["name"]}</font>";
+            echo "<font color=#fff ><div class='username'>Hoşgeldin {$_SESSION["userdata"]["name"]}</div></font>";
         ?>
-        <div class="logindiv">
-            <li>
-                <ul><a href="b-degistir.php">bilgileri değiştir</a></ul>
-                <ul><a href="yaziekle.php"> yazı ekle</a></ul>
-                <ul><a href="sifre-degistir.php">şifre değiştir</a></ul>
-                <ul><a href="logout.php">çıkış</a></ul>
-            </li>
+                <div class="text_add">
+                    <form action="text_add/text_add.php" method="post">
+                        <table cellspacing="5" cellpadding="5">
+                         <tr>
+                             <td> <textarea cols="35" rows="2" name="member_text" id="text_box"></textarea></td>
+                             <td><input type="submit" value="yazı ekle" class="text_add_submit"> </td>
+                         </tr>
+                        </table>
+                    </form>
+                </div>
+
+                <div class="text_null_input"><?php
+                    if(@$_GET["text"]=="null"){
+                        echo "Boş Giriş Yapmayınız!";
+                    }
+                    ?></div>
+            <div class="logindiv">
+            <ul>
+                <li><a href="b-degistir.php">bilgileri değiştir</a></li>
+                <li><a href="new_password/sifre-degistir.php">şifre değiştir</a></li>
+                <li><a href="logout.php">çıkış</a></li>
+            </ul>
         </div>
 
     <?php } ?>
