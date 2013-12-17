@@ -75,10 +75,24 @@
     <?php }else{
             echo "<font color=#fff ><div class='username'>Hoşgeldin {$_SESSION["userdata"]["name"]}</div></font>";
         ?>
-        <div class="logindiv">
+                <div class="text_add">
+                    <form action="text_add/text_add.php" method="post">
+                        <table cellspacing="5" cellpadding="5">
+                         <tr>
+                             <td> <textarea cols="35" rows="2" name="member_text" id="text_box"></textarea></td>
+                             <td><input type="submit" value="yazı ekle" class="text_add_submit"> </td>
+                         </tr>
+                        </table>
+                    </form>
+                </div>
+                <div class="text_null_input"><?php
+                    if(@$_GET["text"]=="null"){
+                        echo "Boş Giriş Yapmayınız!";
+                    }
+                    ?></div>
+            <div class="logindiv">
             <ul>
                 <li><a href="b-degistir.php">bilgileri değiştir</a></li>
-                <li><a href="yaziekle.php"> yazı ekle</a></li>
                 <li><a href="new_password/sifre-degistir.php">şifre değiştir</a></li>
                 <li><a href="logout.php">çıkış</a></li>
             </ul>

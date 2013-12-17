@@ -25,9 +25,9 @@ if($_POST){
             $sql_row = mysql_fetch_array($select);
             if($sql_dizi>0){
             session_start();
-            $_SESSION["userdata"]["password"] =  $sql_row["member_password"];
             $_SESSION["userdata"]["mail"] =  $sql_row["member_mail"];
             $_SESSION["userdata"]["name"] =  $sql_row["member_name"];
+            $_SESSION["userdata"]["password"] =  $sql_row["member_password"];
             Header('Location: index.php');
             }else{
                 Header('Location: index.php?user=f');

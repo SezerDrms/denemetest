@@ -10,8 +10,8 @@ body {
     margin-top: -50px;
     color: white;
     width: auto;
-    float: right;
     height: auto;
+    float: right;
     }
 
 .logindiv li{
@@ -37,6 +37,45 @@ display:inline;
     color: #ddd;
 }
 
+.text_add{
+    width:auto;
+    height: auto;
+    margin-left: 210px;
+    margin-top: -35px;
+    position: absolute;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    background: 1px rgba(255, 255, 255, 0.7);
+    float: left;
+    padding: 2px 15px 2px 15px;
+}
+#text_box{
+    border-color: #990000;
+    border-radius: 5px;
+    box-shadow: none;
+
+}
+.text_add_submit {
+    box-shadow: none;
+    border-radius: 5px;
+    background: 1px rgba(100, 0, 0, 0.7);
+    text-transform: uppercase;
+    text-decoration: none;
+    float: left;
+    padding: 5px;
+    color: #ccc;
+    font-family: Arial,  Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.text_add_submit:hover{
+    box-shadow: none;
+    background: 1px rgba(100, 0, 0, 0.5);
+    color: #ddd;
+    cursor: pointer;
+}
+
 .username{
     text-transform: capitalize;
     font-family: 'Metrophobic', Arial, serif; font-weight:bold;
@@ -45,4 +84,20 @@ display:inline;
     padding: 7px;
     width: 150px;
     font-weight: bold;
+}
+.text_null_input{
+    font-family: Arial,  Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #990000;
+    position: absolute;
+    margin-top: 10px;
+    box-shadow: none;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius:15px;
+    background: 1px rgba(255, 255, 255, 0.7);
+    padding: 3px 15px 3px 5px;
+
+
 }

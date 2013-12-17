@@ -55,7 +55,7 @@ div .member_div a{
 .fo_di span[data-rigth]:hover:before{left: 170px;
     background: 1px rgba(255, 255, 255, .3);}
 .fo_di span[data-rigth]:hover:after{border-right-color: rgba(255,255,255, .3);
-    top: 7px;
+    top: 1px;
     right: -17px;}
 .false-name-pass{
     font:small-caps bold 18px Lucida Grande;

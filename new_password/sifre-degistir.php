@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <html>
 <head>
     <meta charset="utf-8">
@@ -24,7 +25,7 @@
 <?php
 include('../function.php');
 
-session_start();
+
 
 if(isLogin() == true){
 ?>
@@ -50,10 +51,10 @@ if(isLogin() == true){
             }elseif(@$_GET["p"]=="f") {
                 echo "<div style='margin-left: -10px'><font color=#8b0000><center>Şifreler Aynı Değil!</center></font></div>";
             }elseif(@$_GET["n"]=="p_s"){
-                echo "<div><font color=#006400><center>Şifre Değiştirildi.</center></font></div>";
+                echo "<div style='margin-left: -10px;'><font color=#006400><center>Şifre Değiştirildi.</center></font></div>";
             }elseif(@$_GET["c"]=="f"){
                 echo "<div style='margin-left: -10px;
-                margin-top: -14px'><font color=#8b0000><center>Kullandığınız Şifre <br /> Yanlış!</center></font></div>";
+                margin-top: -15px'><font color=#8b0000><center>Kullanıcı Şifresi <br /> Yanlış!</center></font></div>";
             }
             ?></td>
         <td><div class="index_submit"><a href="../index.php">AnaSayfa</a></div><input type="submit" value="Değiştir" id="newpass_submit"></td>
@@ -62,7 +63,7 @@ if(isLogin() == true){
         </form>
     </div>
 <?php }else{
-    Header('Location: index.php');
+    Header('Location: ../index.php');
     }
 ?>
 </body>
