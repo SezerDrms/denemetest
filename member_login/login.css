@@ -45,7 +45,7 @@ display:inline;
     position: absolute;
     border-bottom-left-radius: 70px;
     border-bottom-right-radius: 70px;
-    background: 1px rgba(255, 255, 255, 0.7);
+    background: 1px rgba(255, 255, 255, 0.3);
     float: left;
     padding: 2px 15px 2px 15px;
 }
@@ -98,6 +98,12 @@ display:inline;
     border-bottom-right-radius:15px;
     background: 1px rgba(255, 255, 255, 0.7);
     padding: 3px 15px 3px 5px;
+}
 
-
+.text_area{
+    height: 500px;
+    width: 800px;
+    background: #ffffff;
+    margin: 60px auto;
+    border-radius: 8px;
 }
