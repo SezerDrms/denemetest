@@ -2,7 +2,8 @@
 @import url("member_login/login.css");
 @import url("new_password/new_password.css");
 body{background-image:url("image/call_of_duty_black_ops_desktop_1920x1080_hd-wallpaper-912990.jpg");
-    background-size: 100% 100%;}
+    background-size: 100% 100%;
+    }
 .fo_di{background: 1px rgba(0, 0, 0, 0.7);
     width: 700px;
     border-radius: 20px;

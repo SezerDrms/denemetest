@@ -1,13 +1,16 @@
 <html>
 <?php
+    require_once ("vt.php");
     require_once("kontrol.php");
     include('function.php');
     session_start();
 ?>
 <head>
+    <title><?php echo $_SESSION["userdata"]["name"]; ?></title>
 <meta charset="utf-8">
     <Link href = 'http://fonts.googleapis.com/css?family = Tutku + Bir: 700 'rel =' stil 'type =' text / css '>
-<link rel="stylesheet" type="text/css" href="layout.css">
+    <link rel="stylesheet" type="text/css" href="layout.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="image/call_of_duty_black_ops_desktop_1920x1080_hd-wallpaper-912990.jpg">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script type="text/javascript">
     $(function(){
@@ -72,9 +75,11 @@
         <td><input type="submit" id="mysubmit" value="Giriş" > </td>
     </tr>
     </table>
-    <?php }else{
-            echo "<font color=#fff ><div class='username'>Hoşgeldin {$_SESSION["userdata"]["name"]}</div></font>";
-        ?>
+
+    <?php }else{ ?>
+            <div class="logindivtasiyici">
+            <font color=#fff ><div class='username'>Hoşgeldin <?php echo $_SESSION["userdata"]["name"]?></div></font>
+      <?php  ?>
                 <div class="text_add">
                     <form action="text_add/text_add.php" method="post">
                         <table cellspacing="5" cellpadding="5">
@@ -91,6 +96,7 @@
                         echo "Boş Giriş Yapmayınız!";
                     }
                     ?></div>
+
             <div class="logindiv">
             <ul>
                 <li><a href="b-degistir.php">bilgileri değiştir</a></li>
@@ -98,10 +104,31 @@
                 <li><a href="logout.php">çıkış</a></li>
             </ul>
         </div>
+                </div>
                 <div class="text_area">
+                <?php
+                    $text_select= mysql_query("SELECT * FROM member_text where text_member_mail='".$_SESSION["userdata"]["mail"].
+                        "'ORDER BY text_id DESC");
+                    if(isLogin()==true){
+                        date_default_timezone_set('Europe/Istanbul');
 
+                        while($text_array=mysql_fetch_array($text_select)){
+                            //$text_array["text_id"];
 
-
+                            echo "<div class='user_text_div'>
+                                <b> Yazan : <span style='text-transform: uppercase;'>".
+                                $text_array["text_member_name"]."</span></b>
+                                \t"."<div style='float:right;padding-right:5px'>".date("H.i:s",$text_array["text_date"])."</div>
+                                <p style='width:730px'>".$text_array["member_text"]."</p>
+                                \t <hr><span style='font-size:12px; float:left;margin-top: 2px'>".date("d / F / Y",$text_array["text_date"])."</span>
+                                <span class='delete_update'>
+                                <a href='text_add/update.php?id=".$text_array['text_id']."'>Düzelt</a>
+                                <a href='text_add/delete.php?id=".$text_array['text_id']."'>Sil</a>
+                                </span>
+                                </div>";
+                        }
+                    }
+                    ?>
                 </div>
     <?php } ?>
 

@@ -1,13 +1,20 @@
 body {
+
     margin: 0;
     height: 0;
     }
+
+.logindivtasiyici{
+    position: fixed;
+    width: 100%;
+    margin-top: -100px;
+}
 
 .logindiv{
     border-bottom-left-radius: 120px;
     background: 1px rgba(100, 100,100, 0.7);
     padding: 10px;
-    margin-top: -50px;
+    margin-top: -36px;
     color: white;
     width: auto;
     height: auto;
@@ -101,9 +108,54 @@ display:inline;
 }
 
 .text_area{
-    height: 500px;
+    height: auto;
     width: 800px;
-    background: #ffffff;
-    margin: 60px auto;
+    background: 1px rgba(0, 0, 0, 0.6);
+    margin: 100px auto;
     border-radius: 8px;
+    color: #ffffff;
+    padding-top: 7px;
+    padding-bottom: 17px;
+}
+.user_text_div{
+    border-radius: 7px;
+    padding: 5px 5px 30px 5px;
+    background: 1px rgba(200, 0, 0, 0.7);
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+.user_text_div p{
+    margin: 5px;
+    font-family: Arial,  Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.delete_update a{
+
+    float:right;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: Arial,  Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left:5px;
+    padding:5px 8px 5px 5px;
+    margin-top: -5px;
+
+
+}
+
+#id_hidden{
+    overflow:hidden;
+}
+
+.delete_update a:hover{
+    background: rgba(0, 0, 0, 0.3);
+
+    border-radius:6px
 }
