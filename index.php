@@ -84,7 +84,7 @@
                     <form action="text_add/text_add.php" method="post">
                         <table cellspacing="5" cellpadding="5">
                          <tr>
-                             <td> <textarea cols="35" rows="2" name="member_text" id="text_box"></textarea></td>
+                             <td> <textarea cols="35" rows="3" name="member_text" id="text_box"></textarea></td>
                              <td><input type="submit" value="yazı ekle" class="text_add_submit"> </td>
                          </tr>
                         </table>
@@ -113,19 +113,34 @@
                         date_default_timezone_set('Europe/Istanbul');
 
                         while($text_array=mysql_fetch_array($text_select)){
-                            //$text_array["text_id"];
 
-                            echo "<div class='user_text_div'>
-                                <b> Yazan : <span style='text-transform: uppercase;'>".
-                                $text_array["text_member_name"]."</span></b>
-                                \t"."<div style='float:right;padding-right:5px'>".date("H.i:s",$text_array["text_date"])."</div>
-                                <p style='width:730px'>".$text_array["member_text"]."</p>
-                                \t <hr><span style='font-size:12px; float:left;margin-top: 2px'>".date("d / F / Y",$text_array["text_date"])."</span>
+
+                            ?> <div class='user_text_div'>
+                                <b> Yazan : <span style='text-transform: uppercase;'><?php
+                                echo $text_array["text_member_name"];?></span></b>
+                                <div style='float:right;padding-right:5px'><?php echo date("H.i:s",$text_array["text_date"]);?></div>
+                                <?php
+                                if(@$_GET["id"]==$text_array["text_id"]){
+                                    ?>
+                                    <div class="update_div">
+                                        <form action="text_add/update.php?id=<?php echo $text_array["text_id"] ?>" method="post">
+  <textarea rows="2" cols="80" name="update_textarea" id="update_textarea_id"><?php echo $text_array["member_text"];?></textarea>
+                                            <input type="submit" id="duzelt_submit" value="Tamam">
+                                        </form></div>
+                                    <?php
+                                }else{
+                                ?>
+
+                                <p style='width:730px'><?php echo $text_array["member_text"];?></p><?php } ?>
+
+                                 <hr><span style='font-size:12px; float:left;margin-top: 2px'>
+                                    <?php echo date("d / F / Y",$text_array["text_date"]);?></span>
+
                                 <span class='delete_update'>
-                                <a href='text_add/update.php?id=".$text_array['text_id']."'>Düzelt</a>
-                                <a href='text_add/delete.php?id=".$text_array['text_id']."'>Sil</a>
+                                <a type="hidden" href='index.php?id=<?php echo $text_array['text_id']; ?>'>Düzelt</a>
+                                <a type="hidden" href='text_add/delete.php?id=<?php echo $text_array['text_id']; ?>'>Sil</a>
                                 </span>
-                                </div>";
+                                </div> <?php
                         }
                     }
                     ?>

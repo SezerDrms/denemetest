@@ -60,6 +60,8 @@ display:inline;
     border-color: #990000;
     border-radius: 5px;
     box-shadow: none;
+    resize:none;
+
 
 }
 .text_add_submit {
@@ -117,6 +119,7 @@ display:inline;
     padding-top: 7px;
     padding-bottom: 17px;
 }
+
 .user_text_div{
     border-radius: 7px;
     padding: 5px 5px 30px 5px;
@@ -136,7 +139,7 @@ display:inline;
 }
 
 .delete_update a{
-
+    overflow: hidden;
     float:right;
     text-decoration: none;
     color: #ffffff;
@@ -153,9 +156,43 @@ display:inline;
 #id_hidden{
     overflow:hidden;
 }
-
+span .delete_update a{
+    overflow: hidden;
+}
 .delete_update a:hover{
     background: rgba(0, 0, 0, 0.3);
-
     border-radius:6px
+}
+
+#update_textarea_id{
+    font-family: Arial,  Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    overflow: hidden;
+    resize:none;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius:6px;
+    color:#ffffff;
+}
+
+#duzelt_submit{
+    overflow: hidden;
+    float:right;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: Arial,  Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left:5px;
+    padding:5px 8px 21px 5px;
+    margin-top: 8px;
+    border-radius: 5px;
+    box-shadow:none;
+    border-style:none;
+    background:1px rgba(36, 36, 36, 0.5);
+}
+
+#duzelt_submit:hover{
+    cursor: pointer;
+    background:1px rgba(36, 36, 36, 0.8);
 }
